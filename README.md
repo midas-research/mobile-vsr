@@ -4,7 +4,7 @@ This is the repository for mobile based lipreading, "MobiVSR v1".
 
 Demo Link and Instructions
 ---------------------------------------------------------------------------------------------
-1. Get the demo for MacOS at the following Link:
+1. Get the demo for MacOS at the following Link: https://drive.google.com/file/d/1MTgX9fnZSvTng4S5FeVDJB-Y12cLnZkm/view?usp=sharing
 
 2. Run the executable.
 3. Press Detect face button to automatically detect face. (try multiple times for optimal results)
