@@ -1,0 +1,174 @@
+/* Main Button Area css
+============================================================================================ */
+.main_btn {
+	padding: 0px 25px;
+	background: transparent;
+	z-index: 222;
+	display: inline-block;
+	text-align: center;
+	color: $title-color;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 48px;
+	border: 1px solid $baseColor;
+	border-radius: 0px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	position: relative;
+	@include transition();
+	cursor: pointer;
+	img {
+		position: absolute;
+		top: 50%;
+		right: -30px;
+		@include transform(translateY(-50%));
+		@include transition();
+	}
+	&:hover {
+		background: $baseColor;
+		color: $title-color;
+		border: 1px solid $baseColor;
+		img {
+			right: -38px;
+		}
+	}
+}
+.main_btn2 {
+	display: inline-block;
+	background: #f9f9ff;
+	padding: 0px 45px;
+	color: $title-color;
+	font-family: $text-font;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 48px;
+	border-radius: 5px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid #dddddd;
+	cursor: pointer;
+	transition: color 0ms linear;
+	&:hover {
+		background-image: -moz-linear-gradient(0deg, rgb(188, 43, 255) 0%, rgb(114, 73, 251) 100%);
+		background-image: -webkit-linear-gradient(0deg, rgb(188, 43, 255) 0%, rgb(114, 73, 251) 100%);
+		background-image: -ms-linear-gradient(0deg, rgb(188, 43, 255) 0%, rgb(114, 73, 251) 100%);
+		box-shadow: 0px 10px 30px 0px rgba(115, 73, 251, 0.3);
+		color: #fff;
+	}
+}
+.submit_btn {
+	width: auto;
+	display: inline-block;
+	background: $baseColor;
+	padding: 0px 30px;
+	color: #fff;
+	font-family: $text-font;
+	font-size: 13px;
+	font-weight: 500;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 5px;
+	outline: none !important;
+	border: 1px solid $baseColor;
+	text-align: center;
+	cursor: pointer;
+	@include transition;
+	box-shadow: -14px 14px 60px rgba(244, 47, 44, 0.32);
+	&:hover {
+		color: $baseColor;
+		background: transparent;
+		box-shadow: none;
+	}
+}
+
+.white_btn {
+	display: inline-block;
+	background: #f9f9ff;
+	padding: 0px 50px;
+	color: $title-color;
+	font-family: $text-font;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 50px;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	cursor: pointer;
+	@include transition;
+	&:hover {
+		background: $baseColor;
+		color: #fff;
+	}
+}
+.banner_btn {
+	padding: 0px 40px;
+	line-height: 48px;
+	background: $baseColor;
+	color: #fff;
+	display: inline-block;
+	border: 1px solid $baseColor;
+	border-radius: 5px;
+	font-size: 14px;
+	font-family: $text-font;
+	font-weight: 500;
+	@include transition;
+	&:hover {
+		color: $baseColor;
+		background: transparent;
+	}
+}
+.banner_btn2 {
+	padding: 0px 35px;
+	line-height: 48px;
+	background: rgba(255, 255, 255, .10);
+	color: #fff;
+	display: inline-block;
+	border: 1px solid #bebfc4;
+	border-radius: 5px;
+	font-size: 14px;
+	font-family: $text-font;
+	font-weight: 500;
+	@include transition;
+	&:hover {
+		color: $baseColor;
+		background: transparent;
+	}
+}
+.white_bg_btn {
+	background: #fff;
+	display: inline-block;
+	color: $title-color;
+	line-height: 40px;
+	padding: 0px 28px;
+	font-size: 14px;
+	font-family: $text-font;
+	font-weight: 500;
+	text-transform: uppercase;
+	@include transition;
+	border: none;
+	&:hover {
+		background: $baseColor;
+		color: #fff;
+	}
+}
+.blog_btn {
+	border: 1px solid #eeeeee;
+	background: #f9f9ff;
+	padding: 0px 32px;
+	font-size: 13px;
+	font-weight: 500;
+	font-family: $text-font;
+	border-radius: 5px;
+	color: $title-color;
+	line-height: 34px;
+	display: inline-block;
+	&:hover {
+		background: $baseColor;
+		border-color: $baseColor;
+		color: #fff;
+	}
+}
+/* End Main Button Area css
+============================================================================================ */
