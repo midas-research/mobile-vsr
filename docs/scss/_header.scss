@@ -1,0 +1,194 @@
+/* =================================== */
+/*  Start Header Area CSS
+/* =================================== */
+
+.canvus_menu {
+	overflow: hidden;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 10;
+	min-height: 80px;
+	width: 100%;
+	.toggle_icon {
+		cursor: pointer;
+		position: relative;
+		height: 20px;
+		width: 30px;
+		top: 30px;
+		left: 0;
+		z-index: 99;
+		@include transition();
+		display: inline-block;
+		background: #ffffff;
+		span {
+			height: 2px;
+			width: 30px;
+			display: block;
+			background: $title-color;
+			cursor: pointer;
+			@include transition(all 0.5s ease-in-out);
+			&:before {
+				content: "";
+				height: 2px;
+				width: 25px;
+				display: block;
+				background: $title-color;
+				left: 0px;
+				top: 20px;
+				position: absolute;
+				@include transition(all 0.5s ease-in-out);
+			}
+			&:after {
+				content: "";
+				height: 2px;
+				width: 20px;
+				display: block;
+				background: $title-color;
+				left: 0px;
+				bottom: 8px;
+				position: absolute;
+				@include transition(all 0.5s ease-in-out);
+			}
+		}
+	}
+}
+
+.side_menu {
+	position: fixed;
+	left: -500px;
+	top: 0px;
+	width: 100%;
+	background: #fff;
+	max-width: 500px;
+	padding: 10px 15px;
+	@media (max-width: 575px) {
+		max-width: 300px;
+		padding: 20px 15px;
+	}
+	z-index: 999;
+	box-shadow: 0px 20px 50px rgba(70, 129, 255, 0.1);
+	@include transition();
+	.logo {
+		margin-bottom: 100px;
+		@media (max-width: 991px) {
+			margin-bottom: 30px;
+		}
+	}
+	.menu-left {
+		max-height: 420px;
+		@media (max-width: 1440px) {
+			margin-top: 20px;
+		}
+		li {
+			margin-bottom: 25px;
+			@media (max-width: 1440px) {
+				margin-bottom: 15px;
+			}
+			&:last-child {
+				margin-bottom: 0px;
+			}
+			a,
+			.dropdown-toggle {
+				cursor: pointer;
+				font-size: 18px;
+				font-weight: 500;
+				color: $title-color;
+				@include transition();
+				&:hover {
+					color: $secondaryColor;
+				}
+			}
+			.dropdown-toggle {
+				background: transparent;
+				border: 0;
+				padding: 0;
+				&:focus {
+					outline: none;
+				}
+				&:after {
+					content: none;
+				}
+			}
+			.dropdown-menu {
+				top: -36px !important;
+				left: 110px !important;
+				border: 0;
+				background: $secondaryColor;
+				border-radius: 0px;
+				a {
+					color: #fff;
+					font-size: 14px;
+				}
+				&.show {
+					&:after {
+						content: "\f178";
+						font: normal normal normal 14px/1 FontAwesome;
+						position: absolute;
+						top: 18px;
+						left: -22%;
+						color: #000;
+						@include transform(scaleX(3));
+					}
+				}
+				.dropdown-item {
+					background: transparent;
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+	}
+}
+.open {
+	.side_menu {
+		left: 0px;
+	}
+	.canvus_menu {
+		z-index: 999;
+		position: fixed;
+		.toggle_icon {
+			left: 50px;
+			@media (max-width: 1440px) {
+				left: 240px;
+			}
+			@media (max-width: 575px) {
+				left: 240px;
+			}
+			span {
+				background: transparent !important;
+				&:before {
+					width: 25px;
+					@include transform(rotate(45deg));
+					top: 9px;
+					left: 3px;
+					@include transition(all 0.5s ease-in-out);
+				}
+				&:after {
+					width: 25px;
+					@include transform(rotate(-45deg));
+					left: 3px;
+					top: 9px;
+					@include transition(all 0.5s ease-in-out);
+				}
+			}
+		}
+	}
+}
+
+/* =================================== */
+/*   End Header Area CSS
+/* =================================== */
+.top-btn-area {
+	padding: 25px 0;
+	text-align: right;
+	@media (max-width: 575px) {
+		.main_btn {
+			margin-right: 30px;
+		}
+	}
+}
+
+/* Home Banner Area css
+============================================================================================ */

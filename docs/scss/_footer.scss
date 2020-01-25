@@ -1,0 +1,207 @@
+/* =================================== */
+/*  Start Footer Area CSS
+/* =================================== */
+.footer-area {
+	min-height: 100%;
+	background: #1e1c27;
+	h6 {
+		color: #fff;
+		margin-bottom: 25px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	@media (max-width: 991px) {
+		.col-lg-3:nth-child(3), .col-lg-3:nth-child(4){
+			.single-footer-widget{
+				margin-bottom: 0;
+			}
+		}
+	}
+	@media (max-width: 570px) {
+		.col-lg-3:nth-child(3){
+			.single-footer-widget{
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+.copy-right-text {
+	i,
+	a {
+		color: $baseColor;
+	}
+}
+
+.instafeed {
+	margin: 0px -24px;
+	padding: 0 15px;
+	@media (max-width: 767px) {
+		margin: -16px;
+	}
+	@media (max-width: 575px) {
+		margin: 0px;
+		padding: 0;
+	}
+	li {
+		overflow: hidden;
+		width: 25%;
+		img {
+			margin: 5px;
+		}
+	}
+}
+
+.footer-social {
+	@media (max-width: 575px) {
+		margin-top: 15px;
+	}
+	a {
+		padding-left: 25px;
+		@media (max-width: 575px) {
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		@include transition();
+		&:hover {
+			i {
+				color: $baseColor;
+			}
+		}
+	}
+	i {
+		color: #cccccc;
+		@include transition();
+	}
+	@media (max-width: 991px) {
+		text-align: left;
+	}
+}
+
+.footer-top {
+	padding: 120px 0px;
+	@media (max-width: 991px) {
+		padding: 80px 0px;
+	}
+}
+.single-footer-widget {
+	@media (max-width: 991px) {
+		margin-bottom: 40px;
+	}
+	.footer-nav {
+		li {
+			list-style: none;
+			margin-bottom: 12px;
+			@media (max-width: 991px) {
+				margin-bottom: 3px;
+			}
+			a {
+				color: $text-color;
+				&:hover {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+	input {
+		border: 1px solid #333333;
+		width: 80% !important;
+		font-weight: 300;
+		background: transparent;
+		color: #ffffff;
+		padding-left: 20px;
+		border-radius: 0;
+		font-size: 14px;
+		border-right: 0px;
+		&:focus {
+			box-shadow: none;
+			color: #ffffff;
+			background: #222222;
+		}
+	}
+	.info {
+		position: absolute;
+		margin-top: 20%;
+		color: #fff;
+		font-size: 12px;
+		background: transparent;
+		&.valid {
+			color: green;
+		}
+		&.error {
+			color: red;
+		}
+	}
+	.click-btn {
+		background: $baseColor;
+		border-radius: 0;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		padding: 6px 12px;
+		border: 0;
+		&:focus {
+			box-shadow: none;
+		}
+		i {
+			color: #fff;
+		}
+	}
+	::-moz-selection {
+		/* Code for Firefox */
+		background-color: #191919 !important;
+		color: #999999;
+	}
+	::selection {
+		background-color: #191919 !important;
+		color: #999999;
+	}
+	::-webkit-input-placeholder {
+		/* WebKit, Blink, Edge */
+		color: #999999;
+		font-weight: 300;
+	}
+	:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18 */
+		color: #999999;
+		opacity: 1;
+		font-weight: 300;
+	}
+	::-moz-placeholder {
+		/* Mozilla Firefox 19+ */
+		color: #999999;
+		opacity: 1;
+		font-weight: 300;
+	}
+	:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		color: #999999;
+		font-weight: 300;
+	}
+	::-ms-input-placeholder {
+		/* Microsoft Edge */
+		color: #999999;
+		font-weight: 300;
+	}
+}
+.footer-bottom {
+	padding: 26px 0px;
+	border-top: 1px solid #333333;
+	@media (max-width: 570px) {
+		padding: 26px 15px;
+	}
+	@media (max-width: 380px) {
+		text-align: left !important;
+	}
+}
+
+.footer-text {
+	a,
+	i {
+		color: $baseColor;
+	}
+}
+/* =================================== */
+/*  End Footer Area CSS
+/* =================================== */

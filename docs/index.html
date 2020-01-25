@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/LOGO.png" type="image/png">
+	<title>mobiVSR MIDAS</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="vendors/animate-css/animate.css">
+	<link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.css">
+
+	<link href="css/video-js.min.css" rel="stylesheet" type="text/css">
+    <link href="css/videojs.record.css" rel="stylesheet" type="text/css">
+<!--    <link href="css/examples.css" rel="stylesheet" type="text/css">-->
+
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.myVideo-dimensions {
+		  height: 450px;
+		  width: 600px
+		}
+		#myBox {
+			position : absolute;
+			top: -30vh;
+		}
+		#box-image {
+			position: relative;
+			top:350px;
+			left:230px;
+			z-index : 100;
+			height: 100px;
+			width: 100px;
+		}
+		#box-warning {
+			color : red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!--================ Offcanvus Menu Area =================-->
+	<div class="side_menu">
+		<div class="logo">
+			<a href="index.html">
+				<center><img src="img/logo.png" height="100" width="100" alt="">
+					<h3>MIDAS</h3></center>
+			</a>
+		</div>
+
+		<form class="form-inline">
+
+		  <div class="form-group mx-sm-3 mb-2">
+			<label for="inputPassword2" class="sr-only">Password</label>
+			<input id="new-word" type="input" class="form-control" id="inputPassword2" placeholder="Contribute!">
+		  </div>
+		  <button id="contribute" type="button" class="btn btn-primary mb-2">Add New Word</button>
+	</form>
+		<center><h4>Available List of Words</h4></center>
+		<div id="words" style="overflow-y: scroll; height:65vh">
+			</div></div>
+	<!--================ End Offcanvus Menu Area =================-->
+
+	<!--================ Canvus Menu Area =================-->
+	<div class="canvus_menu">
+		<div class="container">
+			<div class="toggle_icon" title="Menu Bar">
+				<span></span>
+<!--				<div>List of Available Words</div>-->
+
+			</div>
+		</div>
+	</div>
+	<!--================ End Canvus Menu Area =================-->
+
+	<section class="top-btn-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2">
+					<a href="#" class="main_btn">
+<!--						book a table-->
+						<img src="img/next.png" class="imgi" alt="">
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!--================ Start banner section =================-->
+	<section class="home-banner-area relative">
+		<div class="container-fluid">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="header-right col-lg-6 col-md-6" align="center">
+					<h1>
+						MobiVSR <br>
+						Deploy
+					</h1>
+					<p class="pt-20" align="center">
+						You can try speaking in the camera OR upload a short video down here
+					</p>
+					<form ref='uploadForm' id='uploadForm' method='post'  encType="multipart/form-data">
+						<center><div>
+							<input type="file" class="btn sonar-btn" name="sampleFile" accept=".mp4, .webm"  required />
+						</div></center>
+						 <br>
+                	</form>
+                    <center><div><button class="btn warning btn-2 m-2" id="submit_btn">Detect</button>						</div></center>
+
+				</div>
+					<div class="col-lg-6 col-md-6 header-left">
+
+				<div id="myBox">
+					<img id="box-image" src="img/box.png" alt="">
+						<video id="myVideo" playsinline class="video-js vjs-default-skin"></video>
+					<center><span id="box-warning" class="d-none"><h4>Position your lips inside the box and </br>then press the white button on bottom left to begin recording</h4></span></center>
+					</div>
+				</div>
+			</div>
+			<div id="data-box" class="row d-none align-items-center justify-content-center" style="margin-top:25vh">
+				<div class="header-right col-lg-6 col-md-6">
+					<div><h3>Here's what you spoke : </h3></div>
+				</div>
+				<div class="col-lg-6 col-md-6 header-left">
+					<div id="labels">THEMSELVES PERSON MILITARY MILLION WHOLE</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="vendors/jquery-ui/jquery-ui.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/swiper/js/swiper.min.js"></script>
+	<script src="vendors/scroll/jquery.mCustomScrollbar.js"></script>
+	<script src="js/theme.js"></script>
+
+
+
+
+
+  <script src="js/video.min.js"></script>
+  <script src="js/RecordRTC.js"></script>
+  <script src="js/adapter.js"></script>
+  <script src="js/videojs.record.js"></script>
+  <script src="js/browser-workarounds.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/video-recorder.js"></script>
+
+	<script>
+		$("#myBox").click(()=>{
+			$("#box-warning").removeClass("d-none")
+			$("#box-warning").addClass("d-block")
+		})
+		function send_image(e) {
+			var image = new FormData();
+			image.append("file", $('#uploadForm')[0].elements[0].files[0])
+			$.ajax({
+			  url: "https://192.168.23.36:8443/upload",
+			  // url: "http://localhost:8080/upload",
+			  type: 'POST',
+			  data: image,
+			  processData: false,
+			  contentType: false,
+			  success: function (data) {
+				console.log(data);
+			  }
+			}).done( (data) => {
+				console.log(data);
+            const l = document.getElementById("labels")
+            l.innerHTML =`<h5>` + data.split(", ").join(", ").slice(0,-3) + `</h5>`
+            $("#data-box").removeClass("d-none")
+            $("#data-box").addClass("d-flex")
+
+
+			})
+		}
+		function send_word(e) {
+			var word_elem = document.getElementById('new-word');
+			let word = word_elem.value;
+			if(word.length==0)
+				return
+			setTimeout(()=>{
+				document.getElementById('new-word').value=''
+				$('#new-word').attr('placeholder','add More Words !')
+
+				}, 1000)
+			$.ajax({
+			  url: "https://192.168.23.36:8443/add_word",
+			  //url: "http://localhost:8080/add_word",
+			  type: 'POST',
+			  dataType: "json",
+			  data: {words: word},
+			  success: function (data) {
+				console.log(data);
+				debugger
+			  }
+			}).done( (data) => {
+				debugger
+				console.log(data);
+				console.log('added-word')
+			})
+		}
+		$('#submit_btn').click((e)=>send_image(e))
+		$('#contribute').click((e)=>send_word(e))
+	</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+/* Home Banner Area css
+============================================================================================ */
+.home-banner-area {
+    background: #ffffff;
+    position: relative;
+    .owl-nav {
+        right: 58%;
+        position: absolute;
+        bottom: 30px;
+        @include flex();
+        @include transform(translateX(-50%));
+        @media(max-width: 991px) {
+            display: none;
+        }
+        .owl-prev {
+            @include transform(rotate(180deg));
+            position: relative;
+            top: 3px;
+            margin-right: 40px;
+        }
+        .owl-prev, .owl-next {
+            @include filter(brightness(0) invert(1));
+            @include transition();
+            opacity: .4;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .fullscreen {
+        height: 100% !important;
+    }
+}
+
+.header-left {
+    position: relative;
+    padding-right: 0px;
+    @media(max-width: 767px) {
+        display: none;
+    }
+    .video-popup{
+        position: absolute;
+        bottom: 110px;
+        left: -15px;
+        @media(max-width: 991px) {
+            bottom: 60px;
+        }
+        .watch{
+            color: #fff;
+            padding-left: 50px;
+            h5{
+                font-size: 18px;
+                color: #fff;
+            }
+            p{
+                text-transform: uppercase;
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.header-right {
+    padding-left: 20%;
+    padding-right: 9.5%;
+    h1{
+        margin-bottom: 30px;
+    }
+    @media (max-width: 1680px) {
+        padding-left: 17%;
+        padding-right: 6%;
+    }
+    @media (max-width: 1440px) {
+        padding-left: 12%;
+        padding-right: 11%;
+    }
+    @media (max-width: 1380px) {
+        padding-left: 10%;
+    }
+    @media (max-width: 1199px) {
+        padding-left: 12%;
+        padding-right: 6%;
+    }
+    @media (max-width: 1024px) {
+        padding-left: 5%;
+    }
+    @media (max-width: 991px) {
+        padding-left: 15%;
+        padding-right: 0;
+    }
+    @media(max-width: 767px) {
+        position: relative;
+//         background: url(../img/banner/banner-img.jpg) center no-repeat;
+        background-size: cover;
+        padding: 100px 120px;
+        z-index: 1;
+        &:after{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            content: "";
+            opacity: .2;
+            z-index: -1;
+        }
+        h1{
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        p{
+            color: #fff;
+        }
+        .main_btn{
+            color: #fff;
+            margin-top: 20px;
+            img{
+                @include filter(invert(1));
+            }
+        }
+    }
+    @media(max-width: 570px) {
+        padding: 80px 15px;
+    }
+
+    h1 {
+        font-size: 60px;
+        line-height: 1;
+        font-weight: 400;
+        @media(max-width: 1440px) {
+            font-size: 45px;
+        }
+        @media(max-width: 991px) {
+            font-size: 35px;
+        }
+        br {
+            @media(max-width: 1440px) {
+                display: none;
+            }
+        }
+    }
+    .main_btn{
+        margin-top: 20px;
+    }
+}
+
+/* common banner Area css
+============================================================================================ */
+.home-banner-area.common-banner{
+    max-height: 450px;
+    .header-right{
+        @media (max-width: 1920px) {
+            padding-right: 7.5%;
+        }
+        @media (max-width: 1024px) {
+            padding-right: 3%;
+        }
+        @media (max-width: 991px) {
+            padding-right: 0;
+        }
+        .page-link-wrap{
+            position: relative;
+            padding: 0px 25px;
+            line-height: 48px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid $baseColor;
+            border-radius: 0px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-top: 20px;
+            img{
+                position: absolute;
+                top: 50%;
+                right: -30px;
+                @include transform(translateY(-50%));
+                @include transition();
+                @media(max-width: 767px) {
+                    @include filter(invert(1));
+                }
+            }
+            .page_link {
+                a {
+                  font-size: 14px;
+                  color: $title-color;
+                  font-family: $text-font;
+                  font-weight: 400;
+                  margin-right: 30px;
+                  position: relative;
+                  text-transform: capitalize;
+                  @media(max-width: 767px) {
+                      color: #fff;
+                  }
+                  &:before {
+                    content: "\f178";
+                    font: normal normal normal 14px/1 FontAwesome;
+                    position: absolute;
+                    right: -25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
+                  &:last-child {
+                    margin-right: 0px;
+                    &:before {
+                      display: none;
+                    }
+                  }
+                }
+            }
+        }
+    }
+}
+
+/* Blog Area css
+============================================================================================ */
+.home_slider{
+	.swiper-slide{
+		position: relative;
+		.slider_text{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 5;
+			opacity: 0;
+            transition: all 4s ease;
+            text-align: center;
+            h1 {
+                text-transform: capitalize;
+                color: #ffffff;
+                font-size: 80px;
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
+            p {
+                color: #ffffff;
+                max-width: 516px;
+                margin: 0 auto;
+                font-size: 14px;
+                margin-bottom: 50px;
+            }
+		}
+		&.swiper-slide-active{
+			.slider_text{
+				opacity: 1;
+			}
+		}
+	}
+}
+/* End Blog Area css
+============================================================================================ */
+
+/* Banner Area css
+============================================================================================ */
+
+.banner_area {
+    position: relative;
+    z-index: 1;
+    min-height: 400px;
+}
+
+/* End Banner Area css
+============================================================================================ */

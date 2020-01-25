@@ -1,0 +1,43 @@
+body {
+    line-height: 27px;
+    font-size: 14px;
+    font-family: $text-font;
+    font-weight: 400;
+    color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $title-font;
+    font-weight: 700;
+    color: $title-color;
+}
+
+.list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    @include transition();
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.row.m0 {
+    margin: 0px;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
